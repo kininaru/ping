@@ -50,5 +50,5 @@ func PingAndPrint(host string, count int) {
 	stat := pinger.Statistics()
 	fmt.Printf("向地址 %s（IP 为 %s) 发送了 %d 个请求，结果如下：\n", stat.Addr, stat.IPAddr, count)
 	fmt.Println(stat.Rtts)
-	fmt.Printf("最大 RTT 为 %.3fms，最小 RTT 为：%.3fms\n", float64(stat.MaxRtt)/1000000, float64(stat.MinRtt)/10000000.0)
+	fmt.Printf("其中最大 RTT 为 %.3fms，最小 RTT 为：%.3fms\n", float64(stat.MaxRtt)/1000000, float64(stat.MinRtt)/1000000)
 }
